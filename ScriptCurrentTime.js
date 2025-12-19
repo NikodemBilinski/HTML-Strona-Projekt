@@ -1,5 +1,3 @@
-
-
 function GenerateTime()
 {
 
@@ -15,6 +13,14 @@ function GenerateTime()
     {
         time_seconds = "0" + time_seconds;
     }
+    else if(time_Minutes < 10)
+    {
+        time_Minutes = "0" + time_Minutes;
+    }
+    else if(time_Hours < 10)
+    {
+        time_Hours = "0" + time_Hours
+    }
     
     time_YMD = time_Year + "/" + (time_Month+1) + "/" + time_Day;
     
@@ -22,6 +28,7 @@ function GenerateTime()
 
     document.getElementById("YMD").textContent = time_YMD;
     document.getElementById("HMS").textContent = time_HMS;
+
 }
 
 GenerateTime();
