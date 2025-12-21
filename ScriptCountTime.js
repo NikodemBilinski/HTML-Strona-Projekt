@@ -17,8 +17,8 @@ function GenerateTime()
 
     var years = Math.round(days/365 * 100)/100;
 
-    document.getElementById("HowMuchPassed").innerHTML = "Seconds: "+ seconds + "<br>"+"Minutes: "+ minutes + "<br>"+"Hours: "+ hours + "<br>"+
-    "Days: "+days + "<br>"+"Years: "+ years + "<br>";
+    document.getElementById("CountTime").innerHTML = "Seconds: "+ seconds + " | "+"Minutes: "+ minutes + "<br>"+"Hours: "+ hours + " | "+
+    "Days: "+days + "<br>"+"Total Years: "+ years + "<br>";
     
 }
 

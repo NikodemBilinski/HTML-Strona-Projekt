@@ -2,11 +2,12 @@
  <head>
    <link rel="stylesheet" href="style.css">
  </head>
- <body class="content-background">
+ <body>
    
    <header>
-      <h1><div id="headertext">How long has it been?</div></h1>
-      <button>Wallpaper Change</button>
+      <script src="WallpaperChange.js"></script>
+      <h1 id="headertext">How long has it been?</h1>
+      <button onclick="wallpaperChange()">Wallpaper Change</button>
    </header>
    <div id="UnderHeader">
       <h3>  
@@ -25,12 +26,17 @@
    </div>
    <div id="TimeHolder">
       <div id="CurrentTime">
+         <div id="CurrentTimeHeader">Current Local Time</div>
          <div id="YMD"></div>
          <div id="HMS"></div>
          <script src="ScriptCurrentTime.js"></script>
       </div>
       <div id="HowMuchPassed">
-         <script src="ScriptCountTime.js"></script>
+         <div id="CurrentTimeHeader">Time that has passed since the announcment</div>
+         <div id="CountTime">
+            <script src="ScriptCountTime.js"></script>
+         </div>
+         
       </div>
    </div>
  </body>   
