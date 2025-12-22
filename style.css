@@ -1,12 +1,47 @@
-body
+html,body
 {
     padding: 0;
     margin: 0;
     font-family: "Verdana";
     color: white;
-    background-image: url("SkyrimWallpaper1.png");
-    height: fit-content;
-    
+    height: 100%;
+}
+#bg
+{
+    position: relative;
+    background-image: url("Wallpapers/SkyrimWallpaper1.png");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+#bg-overlay
+{
+    position: absolute;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+    z-index: 3;
+}
+#bg > * 
+{
+    position: relative;
+    z-index: 4;
+}
+#bg::after
+{
+    content: "";
+    position: absolute;
+    height: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,1));
+    pointer-events: none;
 }
 h1
 { 
@@ -47,6 +82,7 @@ h1
 }
 button
 {
+    
     width: 150px;
     height: 25px;
     color: rgba(2000, 200, 200 , 1);
@@ -59,6 +95,8 @@ button
 }
 button:hover
 {
+    transition: background-color 0.5s ease;
+    cursor: pointer;
     background-color: rgba(7, 9, 15, 0.8);
 }
 header
@@ -75,35 +113,44 @@ header
 {
     width: 100%;
     float: left;
-    margin-top: 150px;
+    margin-top: 25px;
 }
 #CurrentTime
 {
     color:thistle;
-    width: 48%;
-    font-size: 40;
+    width: 40vw;
+    font-size: 20;
     text-align: center;
     float: left;
+    margin-left: 30px;
     border: 2px solid black;
     background-color: rgba(7, 9, 15, 0.35);
     border-radius: 15px;
-    height: 350px;
+    height: 200px;
 }
 #CurrentTimeHeader
 {
     padding: 15px;
-    font-size: 50;
+    font-size: 30;
 }
 #HowMuchPassed
 {
     color:thistle;
-    width: 48%;
-    font-size: 30;
+    width: 40vw;
+    font-size: 20;
     text-align: center;
     float: right;
+    margin-right: 30px;
     border: 2px solid black;
     background-color: rgba(7, 9, 15, 0.4);
     border-radius: 15px;
-    height: 350px;
+    height: 200px;
     
+}
+
+footer
+{
+    width: 100vw;
+    height: 25vh;
+    background-color: rgb(0, 0, 0);
 }

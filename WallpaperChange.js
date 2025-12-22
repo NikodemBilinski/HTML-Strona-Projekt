@@ -9,8 +9,19 @@ function wallpaperChange()
     }
     else
     {
-        document.body.style.backgroundImage = "url(SkyrimWallpaper" + random +".png)";
+        document.getElementById("bg-overlay").style.opacity = 1;
+        setTimeout(Wallpaper(random),10000);
     }
+
     
 }
+
+function Wallpaper(random)
+{
+        document.getElementById("bg").style.backgroundImage = "url(Wallpapers/SkyrimWallpaper"+random+".png";
+        document.getElementById("bg-overlay").style.opacity = 0;
+}
+
+
+setInterval(wallpaperChange, 60000)
 
