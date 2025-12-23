@@ -1,6 +1,5 @@
 function GenerateTime()
 {
-
     Mcolor = "cos";
     time_Year = new Date().getFullYear();
     time_Month = new Date().getMonth();

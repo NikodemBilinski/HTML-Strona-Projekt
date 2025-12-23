@@ -1,7 +1,7 @@
-previous = 0;
+let previous = 0;
 function wallpaperChange()
 {
-    random = previous;
+    let random = previous;
     random = Math.round((Math.random() * 8) + 1);
     if(random == previous)
     {
@@ -9,8 +9,11 @@ function wallpaperChange()
     }
     else
     {
+        // fade out
         document.getElementById("bg-overlay").style.opacity = 1;
-        setTimeout(Wallpaper(random),10000);
+
+        //fade in
+        setTimeout(Wallpaper, 2500, random);
     }
 
     
@@ -18,7 +21,7 @@ function wallpaperChange()
 
 function Wallpaper(random)
 {
-        document.getElementById("bg").style.backgroundImage = "url(Wallpapers/SkyrimWallpaper"+random+".png";
+        document.getElementById("bg").style.backgroundImage = `url("Wallpapers/SkyrimWallpaper`+random+`.png")`;
         document.getElementById("bg-overlay").style.opacity = 0;
 }
 
